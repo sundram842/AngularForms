@@ -1,0 +1,13 @@
+<form [formGroup]="add">
+  <div formArrayName="user">
+    <ng-container *ngFor="let value of userArray.controls; index as i" [formGroupName]="i">
+      <input type="text" formControlName="name" />
+      <input type="text" formControlName="age" />
+      <input type="text" formControlName="dep" />
+      <button (click)="remove(i)">-</button>
+      
+      
+    </ng-container>
+  </div>
+</form>
+<button (click)="addForm()">+</button>

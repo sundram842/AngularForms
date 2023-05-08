@@ -1,0 +1,8 @@
+<form [formGroup]="adduser">
+    <input type="text" formControlName="name">
+    <span *ngIf="adduser.get('name')?.hasError('required')&&adduser.get('name')?.touched"> This field is required </span>
+    <span *ngIf="adduser.get('name')?.hasError('minlength')&&adduser.get('name')?.touched">atlest 5 later is required</span>
+    <span *ngIf="adduser.get('name')?.hasError('maxlength')" >Maximum 10 is accecpet</span>
+    <textarea formControlName="about"></textarea>
+    <button (click)="submit()">submit</button>
+</form>

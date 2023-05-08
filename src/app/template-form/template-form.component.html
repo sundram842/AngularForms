@@ -1,0 +1,13 @@
+<!--this i one example of simple form-->
+<form>
+    <input type="text" [(ngModel)]="firstName" name="firstName">
+</form>
+<h1>{{firstName}}</h1>
+
+<form #addcustomerForm="ngForm" (submit)="addcustomer(addcustomerForm.value)">
+  <input type="text" [(ngModel)]="customerNmae" name="customerNmae">
+  <br>
+  <input type="checkbox" [(ngModel)]="check" name="check">
+  <br>
+  <button type="submit">Submit form</button>
+</form>

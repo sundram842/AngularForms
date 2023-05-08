@@ -1,0 +1,7 @@
+<form #addcustomerForm="ngForm" (submit)="addcustomer(addcustomerForm.value)">
+  <input type="text" [(ngModel)]="customerNmae" name="customerNmae" required minlength="10">
+  <br>
+  <input type="checkbox" [(ngModel)]="check" name="check" required>
+  <br>
+  <button type="submit" [disabled]="!addcustomerForm.valid">Submit form</button>
+</form>
